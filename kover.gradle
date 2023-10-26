@@ -1,0 +1,21 @@
+def excludeClasses = [
+        "*Activity*",
+        "*Fragment*",
+        "*BuildConfig*",
+]
+
+def includeClasses = [
+        "tat.mukhutdinov.koversample.feature.*",
+]
+
+koverReport {
+    filters {
+        includes {
+            classes(includeClasses)
+        }
+
+        excludes {
+            classes(excludeClasses)
+        }
+    }
+}
